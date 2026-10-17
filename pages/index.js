@@ -4,7 +4,6 @@ import SiteHead from "../src/shared/components/SiteHead";
 import Button from "../src/shared/components/Button";
 import Icon from "../src/shared/components/Icon";
 import Reveal from "../src/shared/components/Reveal";
-import Quote from "../src/shared/components/Quote";
 import CtaBand from "../src/shared/components/CtaBand";
 import RecentEvents from "../src/shared/components/RecentEvents";
 import { StatRow } from "../src/shared/components/Stat";
@@ -196,21 +195,7 @@ export default function Home({ stats, countries, recent }) {
       {/* 5. Recent events, from Supabase. */}
       <RecentEvents events={recent} />
 
-      {/* 6. A student voice. */}
-      <Section tone="white">
-        <Container>
-          <Reveal className="grid gap-10 md:grid-cols-12 md:items-center">
-            <div className="md:col-span-8">
-              <Quote text="[TODO: real quote from a chapter head]" name="[TODO: name]" role="Chapter head, [TODO: school]" />
-            </div>
-            <div className="relative aspect-[3/4] overflow-hidden rounded-band md:col-span-4">
-              <Image src={photos.clubFairFrame.src} alt={photos.clubFairFrame.alt} fill sizes="(min-width: 768px) 30vw, 100vw" className="object-cover" placeholder="blur" />
-            </div>
-          </Reveal>
-        </Container>
-      </Section>
-
-      {/* 7. What to do next. */}
+      {/* 6. What to do next. */}
       <CtaBand
         photo={photos.careLetters}
         text={`No branch near you? You can be the first. Or support the ${stats.chapters} chapters already running with a donation.`}

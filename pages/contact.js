@@ -84,7 +84,8 @@ export default function Contact() {
             ))}
           </ul>
           <p className="mt-8 text-sm text-muted">
-            Curing with Care is a registered 501(c)(3) nonprofit. [TODO: mailing address and EIN, if the board wants them published.]
+            Curing with Care is a registered 501(c)(3) nonprofit. For anything you would send by mail, email{" "}
+            <a href={`mailto:${site.email}`} className="font-medium text-care-700 hover:underline underline-offset-4">{site.email}</a>.
           </p>
         </Container>
       </Section>

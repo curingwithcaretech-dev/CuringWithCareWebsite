@@ -24,7 +24,7 @@ const steps = [
   },
   {
     title: "Set up the club",
-    text: "Register the club with your school and find a faculty advisor. [TODO: confirm what CARE provides here, such as a starter kit, templates or a constitution.]",
+    text: "Register the club with your school and find a faculty advisor.",
   },
   {
     title: "Run your first event",
@@ -52,10 +52,6 @@ const faqs = [
   {
     q: "Can I start a chapter outside the United States?",
     a: "Yes. There are chapters in Canada, India and the United Arab Emirates, and we are glad to add more.",
-  },
-  {
-    q: "Does it cost anything?",
-    a: "[TODO: confirm whether there are any dues or costs for a new chapter.]",
   },
   {
     q: "Who do I talk to?",
@@ -216,7 +212,7 @@ export default function StartABranch({ stats }) {
           <div className="max-w-3xl">
             <p className="text-eyebrow text-care-300">Ready?</p>
             <h2 className="font-display text-h1 mt-3 font-semibold">Be chapter number {stats.chapters + 1}.</h2>
-            <p className="text-lead mt-4 max-w-xl text-care-100">The form takes about five minutes. We reply within [TODO: typical reply time].</p>
+            <p className="text-lead mt-4 max-w-xl text-care-100">The form takes about five minutes, and a board member will get back to you.</p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button href={site.startBranchFormUrl} variant="inverse" size="lg" icon="arrow-up-right">
                 Apply to start a chapter

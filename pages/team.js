@@ -22,7 +22,7 @@ export async function getStaticProps() {
 function Portrait({ member, sizes, className = "" }) {
   if (!member.photo) {
     return (
-      <div className={`flex items-center justify-center bg-care-100 ${className}`} aria-hidden="true">
+      <div className={`absolute inset-0 flex items-center justify-center bg-care-100 ${className}`} aria-hidden="true">
         <Image src="/logo.png" alt="" width={48} height={48} className="h-12 w-12 rounded-full opacity-70" />
       </div>
     );
@@ -165,7 +165,7 @@ export default function Team({ board, research, journalism, interns }) {
         photo={photos.hillmanTour}
         eyebrow="Join the team"
         title="Board, team and intern spots open every year."
-        text="[TODO: when applications open and where to apply.] Until then, the fastest way in is through your school's chapter."
+        text="Applications for the board, teams and intern program are coming soon. Until then, the fastest way in is through your school's chapter."
         secondary={{ label: "Contact us", href: "/contact" }}
       />
     </>
