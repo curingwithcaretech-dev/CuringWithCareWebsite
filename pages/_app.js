@@ -3,9 +3,10 @@ import Head from "next/head";
 import Navbar from "../src/shared/components/Navbar";
 import Footer from "../src/shared/components/Footer";
 import BackToTop from "../src/shared/components/BackToTop";
+import ErrorBoundary from "../src/shared/components/ErrorBoundary";
 import { fontClassName } from "../src/shared/fonts";
 
-export default function CareApp({ Component, pageProps }) {
+export default function CareApp({ Component, pageProps, router }) {
   return (
     <div className={`${fontClassName} flex min-h-screen flex-col font-sans`}>
       <Head>
@@ -21,7 +22,9 @@ export default function CareApp({ Component, pageProps }) {
       </a>
       <Navbar />
       <main id="main" tabIndex={-1} className="flex-1 outline-none">
-        <Component {...pageProps} />
+        <ErrorBoundary resetKey={router.asPath}>
+          <Component {...pageProps} />
+        </ErrorBoundary>
       </main>
       <Footer />
       <BackToTop />
