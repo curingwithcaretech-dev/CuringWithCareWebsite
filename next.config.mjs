@@ -47,8 +47,8 @@ const nextConfig = {
     ];
   },
   images: {
-    // 55 for the full-screen hero, 65 for other large photos, 75 everywhere else.
-    qualities: [55, 65, 75],
+    // One quality for every photo, so Vercel makes fewer image variants.
+    qualities: [75],
     formats: ["image/avif", "image/webp"],
   },
 };

@@ -82,9 +82,9 @@ export default function About({ stats }) {
       <Container size="wide" className="pb-6 md:pb-10">
         <figure>
           <div className="relative aspect-[16/9] overflow-hidden rounded-band md:aspect-[21/9]">
-            <Image src={photos.hillmanGroup.src} alt={photos.hillmanGroup.alt} fill priority fetchPriority="high" decoding="sync" sizes="100vw" className="object-cover" placeholder="blur" />
+            <Image src={photos.hopeLetters.src} alt={photos.hopeLetters.alt} fill priority fetchPriority="high" decoding="sync" sizes="100vw" className="object-cover object-[50%_75%]" placeholder="blur" />
           </div>
-          <figcaption className="mt-3 text-sm text-muted">Members on a visit to the UPMC Hillman Cancer Center in Pittsburgh.</figcaption>
+          <figcaption className="mt-3 text-sm text-muted">Members under the HOPE letters at a Relay for Life.</figcaption>
         </figure>
       </Container>
 

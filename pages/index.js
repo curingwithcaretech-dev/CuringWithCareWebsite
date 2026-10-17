@@ -58,17 +58,18 @@ export default function Home({ stats, countries, recent }) {
       <section className="relative flex min-h-[calc(100svh-4rem)] items-end bg-care-900 text-white lg:min-h-[max(46rem,calc(100svh-4.5rem))] lg:max-h-[54rem]">
         <div className="absolute inset-x-0 top-0 bottom-[44%] lg:bottom-0">
           <Image
-            src={photos.hopeLetters.src}
-            alt={photos.hopeLetters.alt}
+            src={photos.hillmanGroup.src}
+            alt={photos.hillmanGroup.alt}
             fill
             priority
             fetchPriority="high"
-            quality={55}
+            quality={75}
             sizes="100vw"
             placeholder="blur"
-            className="object-cover object-[50%_70%] lg:object-[50%_90%]"
+            className="object-cover object-[50%_45%]"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-care-900 via-care-900/40 via-20% to-transparent to-45% lg:from-care-900/90 lg:via-care-900/35 lg:via-45% lg:to-80%" aria-hidden="true" />
+          <div className="absolute inset-0 hidden bg-gradient-to-r from-care-900/70 via-care-900/25 via-40% to-transparent to-65% lg:block" aria-hidden="true" />
         </div>
         <Container className="relative pb-10 pt-48 md:pb-14 lg:pt-72">
           <p className="text-eyebrow text-care-200">A student-run 501(c)(3) nonprofit</p>
