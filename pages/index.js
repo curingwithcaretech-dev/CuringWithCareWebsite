@@ -53,10 +53,10 @@ export default function Home({ stats, countries, recent }) {
     <>
       <SiteHead path="/" />
 
-      {/* 1. Hero: full-bleed photo with the headline over it on large screens;
-          photo on top, text below on phones and tablets so the letters stay whole. */}
-      <section className="relative bg-care-900 text-white lg:flex lg:min-h-[max(46rem,calc(100svh-4.5rem))] lg:max-h-[54rem] lg:items-end">
-        <div className="relative aspect-[4/3] lg:absolute lg:inset-0 lg:aspect-auto">
+      {/* 1. Hero: fills the screen at every size. On phones the photo takes the top of the screen
+          and fades into green behind the text, so faces stay clear; on laptops and up it is full-bleed. */}
+      <section className="relative flex min-h-[calc(100svh-4rem)] items-end bg-care-900 text-white lg:min-h-[max(46rem,calc(100svh-4.5rem))] lg:max-h-[54rem]">
+        <div className="absolute inset-x-0 top-0 bottom-[44%] lg:bottom-0">
           <Image
             src={photos.hopeLetters.src}
             alt={photos.hopeLetters.alt}
@@ -66,12 +66,12 @@ export default function Home({ stats, countries, recent }) {
             quality={55}
             sizes="100vw"
             placeholder="blur"
-            className="object-cover object-[50%_60%] lg:object-[50%_90%]"
+            className="object-cover object-[50%_70%] lg:object-[50%_90%]"
           />
-          <div className="absolute inset-0 hidden bg-gradient-to-t from-care-900/90 via-care-900/35 via-45% to-transparent to-80% lg:block" aria-hidden="true" />
+          <div className="absolute inset-0 bg-gradient-to-t from-care-900 via-care-900/40 via-20% to-transparent to-45% lg:from-care-900/90 lg:via-care-900/35 lg:via-45% lg:to-80%" aria-hidden="true" />
         </div>
-        <Container className="relative py-12 md:py-16 lg:pb-14 lg:pt-72">
-          <p className="text-eyebrow text-care-300 lg:text-care-200">A student-run 501(c)(3) nonprofit</p>
+        <Container className="relative pb-10 pt-48 md:pb-14 lg:pt-72">
+          <p className="text-eyebrow text-care-200">A student-run 501(c)(3) nonprofit</p>
           <h1 className="font-display text-h1 mt-4 max-w-2xl font-semibold">Cancer awareness, run by the students next door.</h1>
           <p className="text-lead mt-4 max-w-lg text-care-100 lg:text-lg">
             High schoolers start CARE chapters at their own schools, then raise awareness, support research and look after patients

@@ -57,14 +57,14 @@ export default function Navbar() {
         scrolled || open ? "shadow-[0_1px_0_0_var(--color-line),0_6px_20px_-12px_rgb(23_26_20/0.25)]" : "shadow-[0_1px_0_0_var(--color-line)]"
       }`}
     >
-      <nav aria-label="Main" className="mx-auto flex h-16 w-full max-w-7xl items-center justify-between px-5 sm:px-8 md:h-[4.5rem]">
+      <nav aria-label="Main" className="mx-auto flex h-16 w-full max-w-7xl items-center justify-between px-5 sm:px-8 lg:h-[4.5rem]">
         <Link href="/" className="flex min-h-11 items-center gap-3 rounded-md" onClick={() => setOpen(false)}>
           <Image src="/logo.png" alt="" width={40} height={40} priority fetchPriority="high" decoding="sync" className="h-10 w-10 rounded-md" />
           <span className="font-display text-xl font-semibold tracking-tight text-care-900">{site.wordmark}</span>
           <span className="sr-only">Home</span>
         </Link>
 
-        <div className="hidden items-center gap-1 md:flex">
+        <div className="hidden items-center gap-1 lg:flex">
           {navItems.map((item) => (
             <Link
               key={item.href}
@@ -90,7 +90,7 @@ export default function Navbar() {
         <button
           ref={toggleRef}
           type="button"
-          className="-mr-2 inline-flex h-11 w-11 items-center justify-center rounded-full text-ink hover:bg-paper-2 md:hidden"
+          className="-mr-2 inline-flex h-11 w-11 items-center justify-center rounded-full text-ink hover:bg-paper-2 lg:hidden"
           aria-expanded={open}
           aria-controls="mobile-menu"
           aria-label={open ? "Close menu" : "Open menu"}
@@ -105,7 +105,7 @@ export default function Navbar() {
         id="mobile-menu"
         ref={panelRef}
         hidden={!open}
-        className="border-t border-line bg-white md:hidden"
+        className="border-t border-line bg-white lg:hidden"
       >
         <ul className="px-3 py-3">
           {navItems.map((item) => (
