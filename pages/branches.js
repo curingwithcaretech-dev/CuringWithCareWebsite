@@ -7,16 +7,13 @@ import Reveal from "../src/shared/components/Reveal";
 import CtaBand from "../src/shared/components/CtaBand";
 import { Container, Section, SectionHeading } from "../src/shared/components/Section";
 import { allRegions, chapterStats } from "../src/utils/chapters";
-import { eventsForBranch } from "../src/utils/events";
 import photos from "../src/shared/photos";
 
 const countryOrder = ["United States", "Canada", "India", "United Arab Emirates"];
 const slugify = (s) => s.toLowerCase().replace(/[^a-z0-9]+/g, "-");
 
 export async function getStaticProps() {
-  // Each region gets the first photo of its latest event, if it has one.
-  const regions = allRegions().map((r) => ({ ...r, photo: eventsForBranch(r.region)[0]?.photos[0] || null }));
-  return { props: { regions, stats: chapterStats() } };
+  return { props: { regions: allRegions(), stats: chapterStats() } };
 }
 
 function NewBadge() {
@@ -27,11 +24,6 @@ function RegionCard({ region, delay }) {
   const heading = <h3 className="font-display text-h3 font-semibold text-ink">{region.region}</h3>;
   return (
     <Reveal as="li" delay={delay} className="mb-6 flex break-inside-avoid flex-col overflow-hidden rounded-card bg-white shadow-card">
-      {region.photo && (
-        <div className="relative aspect-[5/2] bg-care-100">
-          <Image src={region.photo.src} alt="" fill sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw" className="object-cover" />
-        </div>
-      )}
       <div className="flex flex-1 flex-col p-5 md:p-6">
         <div className="flex items-start justify-between gap-3">
           {region.slug ? (

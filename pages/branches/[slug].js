@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import SiteHead from "../../src/shared/components/SiteHead";
 import Button from "../../src/shared/components/Button";
@@ -30,7 +29,6 @@ export default function BranchPage({ region, events }) {
   const lightbox = useLightbox();
   const name = region.region;
   const states = [...new Set(region.chapters.map((c) => c.state))];
-  const headerPhoto = events[0]?.photos[0] || null;
 
   return (
     <>
@@ -46,8 +44,8 @@ export default function BranchPage({ region, events }) {
             <Icon name="arrow-left" size={16} />
             All branches
           </Link>
-          <div className="mt-4 grid gap-10 lg:grid-cols-12 lg:items-end">
-            <div className="lg:col-span-7">
+          <div className="mt-4">
+            <div className="max-w-3xl">
               <p className="text-eyebrow text-care-700">Branch</p>
               <h1 className="font-display text-display mt-3 font-semibold text-ink">{name}</h1>
               <p className="text-lead mt-5 max-w-2xl text-ink-2">
@@ -55,11 +53,6 @@ export default function BranchPage({ region, events }) {
                 {states.length ? ` in ${states.join(", ")}` : ""}.{region.description ? ` ${region.description}` : ""}
               </p>
             </div>
-            {headerPhoto && (
-              <div className="relative aspect-[4/3] overflow-hidden rounded-band lg:col-span-5">
-                <Image src={headerPhoto.src} alt={`${events[0].title}, ${name}`} fill priority fetchPriority="high" sizes="(min-width: 1024px) 40vw, 100vw" className="object-cover" />
-              </div>
-            )}
           </div>
         </Container>
       </Section>
