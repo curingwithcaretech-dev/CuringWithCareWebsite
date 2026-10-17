@@ -45,8 +45,7 @@ export default function ResearchCompetitionSecondEdition() {
           <p className="text-eyebrow mt-4 text-care-700">Review paper competition · Second edition</p>
           <h1 className="font-display text-display mt-3 max-w-4xl font-semibold text-ink">Four prompts on treatment, ethics, research and risk.</h1>
           <p className="text-lead mt-6 max-w-2xl text-ink-2">
-            Teams of up to three students picked one prompt. Ten teams placed. Paper titles and the first-place PDF will be added when the
-            team sends them.
+            Teams of up to three students picked one prompt. Ten teams placed.
           </p>
         </Container>
       </Section>
@@ -74,11 +73,6 @@ export default function ResearchCompetitionSecondEdition() {
           <Reveal className="rounded-band bg-white p-6 shadow-card md:p-10">
             <p className="text-eyebrow text-care-700">First place</p>
             <h2 className="font-display text-h1 mt-3 font-semibold text-ink">{first.authors}</h2>
-            <p className="mt-4 text-lg text-ink-2">[TODO: paper title]</p>
-            <p className="mt-6 inline-flex items-center gap-2 rounded-full bg-care-50 px-4 py-2 text-sm font-medium text-care-800">
-              <Icon name="file-text" size={16} />
-              [TODO: first-place PDF]
-            </p>
           </Reveal>
         </Container>
       </Section>
@@ -90,8 +84,7 @@ export default function ResearchCompetitionSecondEdition() {
             {rest.map((p) => (
               <li key={p.place} className="grid gap-1 py-4 sm:grid-cols-12 sm:items-baseline">
                 <span className="font-display text-h3 font-semibold text-care-700 sm:col-span-2">{p.place}</span>
-                <span className="font-medium text-ink sm:col-span-6">{p.authors}</span>
-                <span className="text-sm text-muted sm:col-span-4">[TODO: paper title]</span>
+                <span className="font-medium text-ink sm:col-span-10">{p.authors}</span>
               </li>
             ))}
           </ol>

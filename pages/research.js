@@ -102,8 +102,8 @@ export default function Research() {
             </ol>
           </div>
           <div className="mt-10 rounded-card bg-white p-6 ring-1 ring-inset ring-care-200 md:p-8">
-            <p className="text-eyebrow text-care-700">Next edition</p>
-            <p className="mt-2 text-lg text-ink">[TODO: dates, prompts and submission link for the third edition.]</p>
+            <p className="text-eyebrow text-care-700">2026 · Third edition</p>
+            <p className="mt-2 text-lg text-ink">Coming soon. Dates, prompts and how to submit will be posted here.</p>
             <p className="mt-2 text-ink-2">
               Until then, questions about the competition go to{" "}
               <Link href="/contact" className="font-semibold text-care-700 underline-offset-4 hover:underline">
@@ -123,8 +123,7 @@ export default function Research() {
             <p className="mt-2 text-ink-2">
               Hosted with the High School Health Research Forum: high schoolers proposed one practical, evidence-based solution to a
               problem in cancer prevention, access to care, education or policy. Semifinalists were recognized and the winner received
-              a cash award. Submissions are closed. [TODO: whether the challenge runs in 2026, and the 2025 results if they may be
-              published.]
+              a cash award. Submissions are closed, and details for 2026 are coming soon.
             </p>
             <a
               href="https://hshrf.org/caac"
