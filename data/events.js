@@ -119,10 +119,10 @@ const events = [
   },
   {
     slug: "club-fair-2024",
-    title: "Club fair",
-    branch: null,
+    title: "Club fair at North Allegheny",
+    branch: "Pittsburgh, PA",
     year: 2024,
-    description: "[TODO: which school, and what the table was about]",
+    description: "The North Allegheny chapter's table at the school club fair, signing up new members.",
     photos: [
       {
         src: "/events/club-fair-2024/1.jpg",
