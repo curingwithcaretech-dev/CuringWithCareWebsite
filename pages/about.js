@@ -88,16 +88,24 @@ export default function About({ stats }) {
         </figure>
       </Container>
 
-      {/* Where it started: the team has to supply the real story. */}
+      {/* Mission: CARE's own statement, carried over from the old About page. */}
       <Section tone="paper" size="tight">
         <Container>
           <div className="grid gap-8 md:grid-cols-12">
             <div className="md:col-span-4">
-              <SectionHeading eyebrow="Where it started" title="One school, then the next one." />
+              <SectionHeading eyebrow="Our mission" title="Rewriting the narrative." />
             </div>
             <div className="md:col-span-8 md:pt-2">
-              <p className="text-lead text-ink-2">
-                [TODO: two or three sentences on how CARE began: the year, the first school, who started it and why.]
+              <p className="text-lead text-ink">
+                Rewriting the narrative to foster hope, resilience, and triumph in the face of cancer.
+              </p>
+              <p className="mt-4 text-ink-2">
+                Cancer is a mutation-driven disease, leading to the possibility of traveling infinite different paths from start to
+                finish. Originated from cells and capable of influencing the entire body, the rapid expansion leads to missed or
+                complicated diagnoses that harm patients. Although cancer is essentially simple, we still misunderstand the true
+                actions that get cancer going. The complexity of each individual tumor, although pushing new forms of treatment, brings
+                about astonishing space to recourse and address. At CARE, we introduce and expand on the questions behind its life and
+                the patients affected by it.
               </p>
               <p className="mt-4 text-ink-2">
                 Today there are {stats.chapters} chapters in {stats.branches} branches across {stats.countryNames.length} countries:{" "}
