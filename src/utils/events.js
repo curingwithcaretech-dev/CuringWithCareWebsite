@@ -1,7 +1,12 @@
-import events from "../../data/events";
+import rawEvents from "../../data/events";
 import { regionName, regionSlug } from "./chapters";
 
 // Helpers over data/events.js. Events are listed newest first in the file.
+
+// "[TODO: ...]" notes in data/events.js mark details still to confirm. They stay in the
+// data file but never reach the site; a description that is only a note is dropped.
+const hideTodo = (text) => (text || "").replace(/\s*\[TODO:[^\]]*\]/g, "").trim();
+const events = rawEvents.map((e) => ({ ...e, description: hideTodo(e.description) }));
 
 export const allEvents = () => events;
 
