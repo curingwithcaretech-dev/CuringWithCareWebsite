@@ -5,6 +5,7 @@ import Footer from "../src/shared/components/Footer";
 import BackToTop from "../src/shared/components/BackToTop";
 import ErrorBoundary from "../src/shared/components/ErrorBoundary";
 import { fontClassName } from "../src/shared/fonts";
+import { Analytics } from "@vercel/analytics/next";
 
 export default function CareApp({ Component, pageProps, router }) {
   return (
@@ -28,6 +29,7 @@ export default function CareApp({ Component, pageProps, router }) {
       </main>
       <Footer />
       <BackToTop />
+      <Analytics />
     </div>
   );
 }
