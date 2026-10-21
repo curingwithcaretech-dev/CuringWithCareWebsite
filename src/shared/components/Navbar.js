@@ -29,6 +29,7 @@ export default function Navbar() {
   const router = useRouter();
   const panelRef = useRef(null);
   const toggleRef = useRef(null);
+  const openedByKeyboard = useRef(false);
 
   // Shadow once the page has scrolled.
   useEffect(() => {
@@ -64,7 +65,8 @@ export default function Navbar() {
     };
     document.addEventListener("keydown", onKey);
     document.documentElement.style.overflow = "hidden";
-    panelRef.current?.querySelector("a")?.focus({ preventScroll: true });
+    // Only a keyboard user needs focus moved into the sheet; after a tap it would just draw a focus ring.
+    if (openedByKeyboard.current) panelRef.current?.querySelector("a")?.focus({ preventScroll: true });
     return () => {
       document.removeEventListener("keydown", onKey);
       document.documentElement.style.overflow = "";
@@ -120,7 +122,11 @@ export default function Navbar() {
             aria-expanded={open}
             aria-controls="mobile-menu"
             aria-label={open ? "Close menu" : "Open menu"}
-            onClick={() => setOpen((v) => !v)}
+            onClick={(e) => {
+              // detail is 0 when the button is pressed with Enter or Space rather than tapped or clicked.
+              openedByKeyboard.current = e.detail === 0;
+              setOpen((v) => !v);
+            }}
           >
             <MenuIcon open={open} />
           </button>
