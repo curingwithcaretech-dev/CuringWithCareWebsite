@@ -1,0 +1,52 @@
+# Pages CMS (app.pagescms.org): a no-code editor for the Journalism section.
+# Anyone with write access to this repo can sign in with GitHub and post; nobody else can.
+# Saving an entry commits a Markdown file to content/journalism/ and Vercel redeploys.
+media:
+  input: public/journalism
+  output: /journalism
+content:
+  - name: journalism
+    label: Journalism
+    type: collection
+    path: content/journalism
+    filename: "{primary}.md"
+    exclude: [README.md]
+    view:
+      fields: [title, author, date, draft]
+      sort: [date, title]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: author
+        label: Author
+        type: string
+      - name: role
+        label: Author's role
+        type: string
+        description: For example "CARE Journalism" or "Chapter head, North Allegheny"
+      - name: date
+        label: Date
+        type: date
+      - name: summary
+        label: Summary
+        type: text
+        description: One or two sentences shown on the Journalism page
+      - name: cover
+        label: Cover photo
+        type: image
+      - name: coverAlt
+        label: Cover photo description
+        type: string
+        description: What the photo shows, for people using screen readers
+      - name: draft
+        label: Draft (hide from the site)
+        type: boolean
+        default: false
+      - name: body
+        label: Article
+        type: rich-text
