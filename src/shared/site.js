@@ -26,5 +26,6 @@ export const navItems = [
   { label: "Branches", href: "/branches" },
   { label: "Events", href: "/events" },
   { label: "Research", href: "/research" },
+  { label: "Journalism", href: "/journalism" },
   { label: "Team", href: "/team" },
 ];
