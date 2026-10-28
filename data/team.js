@@ -117,8 +117,8 @@ const team = [
     position: "Director of Technology",
     category: "board",
     photo: "/team/rishabh.jpg",
-    width: 387,
-    height: 290,
+    width: 608,
+    height: 456,
     bio: ""
   }
 ];
