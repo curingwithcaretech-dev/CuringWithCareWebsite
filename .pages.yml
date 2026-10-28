@@ -1,9 +1,14 @@
 # Pages CMS (app.pagescms.org): a no-code editor for the Journalism section.
-# Anyone with write access to this repo can sign in with GitHub and post; nobody else can.
+# Who can post: people with write access to this repo (they sign in with GitHub) and the
+# collaborators the board has invited by email inside Pages CMS. Nobody else can sign in.
 # Saving an entry commits a Markdown file to content/journalism/ and Vercel redeploys.
+# Uploaded photos land in public/journalism/ and are resized to web size by
+# scripts/optimize-journalism-images.mjs before every build, so any photo size is fine.
 media:
   input: public/journalism
   output: /journalism
+  extensions: [jpg, jpeg, png, webp]
+  rename: safe
 content:
   - name: journalism
     label: Journalism
@@ -39,6 +44,7 @@ content:
       - name: cover
         label: Cover photo
         type: image
+        description: Shown wide (16:9) at the top of the article, so a landscape photo works best. Any size; it is resized automatically.
       - name: coverAlt
         label: Cover photo description
         type: string
@@ -50,3 +56,4 @@ content:
       - name: body
         label: Article
         type: rich-text
+        description: Use the image button to add photos. The description you give a photo is read aloud to people using screen readers; a title becomes a caption under it.

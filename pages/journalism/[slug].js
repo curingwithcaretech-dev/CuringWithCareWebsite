@@ -6,11 +6,11 @@ import { Container, Section } from "../../src/shared/components/Section";
 import { allArticles, articleBySlug, formatDate } from "../../src/utils/journalism";
 
 export async function getStaticPaths() {
-  return { paths: allArticles().map((a) => ({ params: { slug: a.slug } })), fallback: false };
+  return { paths: (await allArticles()).map((a) => ({ params: { slug: a.slug } })), fallback: false };
 }
 
 export async function getStaticProps({ params }) {
-  const article = articleBySlug(params.slug);
+  const article = await articleBySlug(params.slug);
   if (!article) return { notFound: true };
   return { props: { article: { ...article, dateLabel: formatDate(article.date) } } };
 }

@@ -10,7 +10,7 @@ import photos from "../../src/shared/photos";
 
 export async function getStaticProps() {
   // The list only needs the card fields, not each article body.
-  const articles = allArticles().map(({ html: _html, ...rest }) => ({ ...rest, dateLabel: formatDate(rest.date) }));
+  const articles = (await allArticles()).map(({ html: _html, ...rest }) => ({ ...rest, dateLabel: formatDate(rest.date) }));
   return { props: { articles } };
 }
 
@@ -94,6 +94,13 @@ export default function Journalism({ articles }) {
               )}
             </>
           )}
+          <p className="mt-10 text-sm text-muted">
+            On the journalism team?{" "}
+            <a href="https://app.pagescms.org" target="_blank" rel="noopener noreferrer" className="font-medium text-care-700 hover:underline underline-offset-4">
+              Sign in to post a story
+            </a>
+            .
+          </p>
         </Container>
       </Section>
 
