@@ -9,8 +9,8 @@ const team = [
     position: "Chief Executive Officer",
     category: "board",
     photo: "/team/pranathi.jpg",
-    width: 533,
-    height: 799,
+    width: 800,
+    height: 600,
     bio: ""
   },
   {
@@ -18,8 +18,8 @@ const team = [
     position: "Chief Operating Officer",
     category: "board",
     photo: "/team/nidhi.jpg",
-    width: 800,
-    height: 533,
+    width: 640,
+    height: 480,
     bio: ""
   },
   {
@@ -27,8 +27,8 @@ const team = [
     position: "Chief Financial Officer",
     category: "board",
     photo: "/team/diya.jpg",
-    width: 549,
-    height: 800,
+    width: 800,
+    height: 600,
     bio: ""
   },
   {
@@ -45,8 +45,8 @@ const team = [
     position: "Chief Marketing Officer",
     category: "board",
     photo: "/team/sophie.jpg",
-    width: 765,
-    height: 800,
+    width: 800,
+    height: 600,
     bio: ""
   },
   {
@@ -55,19 +55,25 @@ const team = [
     category: "board",
     photo: "/team/lohith.jpg",
     width: 800,
-    height: 800,
+    height: 600,
     bio: ""
   },
   {
     name: "Isha Vyawahare",
     position: "Director of Chapters",
     category: "board",
+    photo: "/team/isha.jpg",
+    width: 800,
+    height: 600,
     bio: ""
   },
   {
     name: "Charvi Namburi",
     position: "Director of Community Outreach",
     category: "board",
+    photo: "/team/charvi.jpg",
+    width: 800,
+    height: 600,
     bio: ""
   },
   {
@@ -83,24 +89,36 @@ const team = [
     name: "Sri Sunkaranam",
     position: "Director of Outreach and Engagement",
     category: "board",
+    photo: "/team/sri.jpg",
+    width: 800,
+    height: 600,
     bio: ""
   },
   {
     name: "Mrithika Elamparuthi",
     position: "Director of Research and Design",
     category: "board",
+    photo: "/team/mrithika.jpg",
+    width: 800,
+    height: 600,
     bio: ""
   },
   {
     name: "Dhrithi Rajeswaran",
     position: "Director of Sponsorships",
     category: "board",
+    photo: "/team/dhrithi.jpg",
+    width: 640,
+    height: 480,
     bio: ""
   },
   {
     name: "Rishabh Patel",
     position: "Director of Technology",
     category: "board",
+    photo: "/team/rishabh.jpg",
+    width: 387,
+    height: 290,
     bio: ""
   }
 ];
